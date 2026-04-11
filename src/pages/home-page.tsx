@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import { ImagePlaceholder } from '@/components/common/image-placeholder'
 import { PageIntro } from '@/components/common/page-intro'
+import { homeImages } from '@/data/site-content'
 import { buttonVariants } from '@/components/ui/button'
 
 export function HomePage() {
@@ -46,7 +47,7 @@ export function HomePage() {
                 <MapPin className="h-5 w-5 text-primary" />
                 <p className="mt-4 text-xl font-semibold text-foreground">White Town setting</p>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  French-colonial mood shaped for Pondicherry’s old quarter.
+                  French-colonial mood shaped for Pondicherry's old quarter.
                 </p>
               </div>
             </div>
@@ -54,13 +55,26 @@ export function HomePage() {
 
           <div className="grid gap-4">
             <ImagePlaceholder
-              caption="Facade placeholder for a French-colonial streetfront with shutters, pale walls, and warm afternoon light."
-              className="min-h-[24rem]"
-              title="Cafe facade"
+              alt={homeImages.hero.alt}
+              caption={homeImages.hero.caption}
+              imageClassName="min-h-[24rem]"
+              imageSrc={homeImages.hero.imageSrc}
+              loading="eager"
+              title={homeImages.hero.title}
             />
             <div className="grid gap-4 sm:grid-cols-2">
-              <ImagePlaceholder caption="Breakfast trays, pastries, and porcelain coffee service." title="Morning table" />
-              <ImagePlaceholder caption="An intimate interior with cane chairs and burgundy upholstery." title="Dining room" />
+              <ImagePlaceholder
+                alt={homeImages.breakfast.alt}
+                caption={homeImages.breakfast.caption}
+                imageSrc={homeImages.breakfast.imageSrc}
+                title={homeImages.breakfast.title}
+              />
+              <ImagePlaceholder
+                alt={homeImages.dining.alt}
+                caption={homeImages.dining.caption}
+                imageSrc={homeImages.dining.imageSrc}
+                title={homeImages.dining.title}
+              />
             </div>
           </div>
         </div>

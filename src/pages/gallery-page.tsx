@@ -9,14 +9,16 @@ export function GalleryPage() {
         <PageIntro
           eyebrow="Gallery"
           title="Interior details, pastry moments, and White Town atmosphere."
-          description="Placeholder frames are used here so the site is ready for real photography later without reworking the layout."
+          description="A set of real photography gives the cafe demo a more grounded, local atmosphere without changing the underlying layout."
         />
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {galleryItems.map((item, index) => (
             <ImagePlaceholder
+              alt={item.alt}
               caption={item.caption}
               className={index % 3 === 0 ? 'md:col-span-2 xl:col-span-1' : ''}
+              imageSrc={item.imageSrc}
               key={item.title}
               title={item.title}
             />

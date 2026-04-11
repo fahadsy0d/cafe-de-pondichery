@@ -1,9 +1,9 @@
-import { MapPin, Phone, Clock3 } from 'lucide-react'
+import { Clock3, MapPin, Phone } from 'lucide-react'
 
-import { Input } from '@/components/ui/input'
 import { PageIntro } from '@/components/common/page-intro'
-import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
 import { contactDetails, openingHours } from '@/data/site-content'
 
 export function ContactPage() {
@@ -14,7 +14,7 @@ export function ContactPage() {
           <PageIntro
             eyebrow="Contact"
             title="Visit the cafe in White Town."
-            description="Address, service hours, and a placeholder map block are included so the demo already reads like a usable local business website."
+            description="Address, service hours, and a map block are already laid out so the demo reads like a usable local business website."
           />
 
           <div className="rounded-[2rem] border border-border bg-white/55 p-6">
@@ -54,7 +54,7 @@ export function ContactPage() {
           <div className="rounded-[2rem] border border-dashed border-primary/30 bg-[linear-gradient(180deg,rgba(175,134,64,0.08),rgba(255,255,255,0.35))] p-6">
             <p className="eyebrow text-primary">Map block</p>
             <h2 className="mt-4 text-4xl leading-none tracking-[-0.04em] text-foreground">
-              Google Maps embed placeholder
+              Google Maps embed ready
             </h2>
             <div className="mt-6 h-[22rem] rounded-[1.5rem] border border-border bg-[radial-gradient(circle_at_top,rgba(122,34,52,0.1),transparent_56%),linear-gradient(180deg,rgba(255,255,255,0.78),rgba(240,225,207,0.8))]" />
           </div>
