@@ -50,8 +50,8 @@ export function ImagePlaceholder({
 
       <div className="p-6">
         <p className="eyebrow text-accent">{imageSrc ? 'Cafe de Pondichery' : 'Photo placeholder'}</p>
-        <h3 className="mt-3 text-3xl leading-none tracking-[-0.04em] text-foreground">{title}</h3>
-        <p className="mt-4 text-sm leading-7 text-muted-foreground">{caption}</p>
+        <h3 className="mt-3 text-[2rem] leading-none tracking-[-0.04em] text-foreground sm:text-3xl">{title}</h3>
+        <p className="mt-4 text-[0.95rem] leading-6 text-muted-foreground sm:text-sm sm:leading-7">{caption}</p>
       </div>
     </div>
   )

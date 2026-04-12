@@ -13,7 +13,7 @@ export function MenuPage() {
 
         <div className="grid gap-4 xl:grid-cols-2">
           {menuSections.map((section) => (
-            <article className="rounded-[2rem] border border-border bg-white/55 p-6" key={section.title}>
+            <article className="rounded-[1.5rem] border border-border bg-white/55 p-5 sm:rounded-[2rem] sm:p-6" key={section.title}>
               <p className="eyebrow text-primary">{section.title}</p>
               <p className="mt-3 text-sm leading-7 text-muted-foreground">{section.description}</p>
 
@@ -21,12 +21,12 @@ export function MenuPage() {
                 {section.items.map((item) => (
                   <div className="grid gap-3 border-t border-border/80 pt-4 sm:grid-cols-[1fr_auto] sm:items-start" key={item.name}>
                     <div>
-                      <h3 className="text-2xl leading-none tracking-[-0.04em] text-foreground">
+                      <h3 className="text-[1.7rem] leading-none tracking-[-0.04em] text-foreground sm:text-2xl">
                         {item.name}
                       </h3>
                       <p className="mt-2 text-sm leading-7 text-muted-foreground">{item.detail}</p>
                     </div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
+                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-primary sm:text-sm sm:tracking-[0.22em]">
                       {item.price}
                     </p>
                   </div>

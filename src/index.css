@@ -54,6 +54,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -142,6 +143,26 @@ h6 {
   font-weight: 700;
   letter-spacing: 0.26em;
   text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  body::before {
+    background-size: 44px 44px;
+  }
+
+  .site-panel {
+    border-radius: 1.5rem;
+    box-shadow: 0 18px 44px rgba(92, 55, 36, 0.1);
+  }
+
+  .site-panel::before {
+    background-size: auto, 40px 40px, 40px 40px;
+  }
+
+  .eyebrow {
+    font-size: 0.64rem;
+    letter-spacing: 0.18em;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

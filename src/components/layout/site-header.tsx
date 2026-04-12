@@ -11,20 +11,20 @@ export function SiteHeader() {
 
   return (
     <header className="site-panel">
-      <div className="page-shell mx-auto flex max-w-6xl flex-col gap-4 px-5 py-5 sm:px-8 lg:px-10">
+      <div className="page-shell mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 sm:gap-4 sm:px-8 sm:py-5 lg:px-10">
         <div className="flex items-center justify-between gap-4">
-          <NavLink className="flex flex-col" onClick={() => setOpen(false)} to="/">
-            <span className="text-sm font-semibold uppercase tracking-[0.28em] text-primary">
+          <NavLink className="min-w-0 flex-1 pr-2" onClick={() => setOpen(false)} to="/">
+            <span className="block text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-primary sm:text-sm sm:tracking-[0.28em]">
               Cafe de Pondichery
             </span>
-            <span className="font-display text-2xl tracking-[-0.04em] text-foreground">
+            <span className="mt-1 block font-display text-[1.6rem] leading-none tracking-[-0.04em] text-foreground sm:text-2xl">
               French cafe & bakery
             </span>
           </NavLink>
 
           <button
             aria-label={open ? 'Close menu' : 'Open menu'}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white/60 text-foreground lg:hidden"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-white/60 text-foreground lg:hidden"
             onClick={() => setOpen((value) => !value)}
             type="button"
           >
@@ -54,12 +54,12 @@ export function SiteHeader() {
         </div>
 
         {open ? (
-          <nav className="grid gap-2 rounded-[1.5rem] border border-border bg-white/55 p-3 lg:hidden" aria-label="Mobile primary">
+          <nav className="grid gap-2 rounded-[1.25rem] border border-border bg-white/55 p-3 lg:hidden" aria-label="Mobile primary">
             {navigation.map((item) => (
               <NavLink
                 className={({ isActive }) =>
                   cn(
-                    'rounded-2xl px-4 py-3 text-sm font-medium transition',
+                    'rounded-[1rem] px-4 py-3.5 text-[0.95rem] font-medium transition',
                     isActive ? 'bg-primary text-primary-foreground' : 'text-foreground hover:bg-white/65',
                   )
                 }
@@ -70,6 +70,13 @@ export function SiteHeader() {
                 {item.label}
               </NavLink>
             ))}
+            <NavLink
+              className={cn(buttonVariants(), 'mt-1 w-full justify-center')}
+              onClick={() => setOpen(false)}
+              to="/contact"
+            >
+              Visit & Contact
+            </NavLink>
           </nav>
         ) : null}
       </div>
